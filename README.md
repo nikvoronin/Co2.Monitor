@@ -10,6 +10,34 @@
 - VID: 0x04D9
 - PID: 0xA052
 
+## Programming with HidSharp
+
+![Console Application Log](https://user-images.githubusercontent.com/11328666/263465860-6dd01731-dba8-4fe9-9ae6-c22ed64ec415.jpg)
+
+Find and try to get a device with pair of vid/pid:
+
+```csharp
+HidDevice? hid =
+    DeviceList.Local
+    .GetHidDevices( VID, PID )
+    .FirstOrDefault();
+```
+
+Open hid stream, then set feature flags with zero filled array `magic_table`:
+
+```csharp
+using var hidStream = hid.Open();
+
+byte[] magic_table = new byte[9];
+hidStream.SetFeature( magic_table );
+```
+
+We are ready to read (poll) data packets:
+
+```csharp
+var raw = hidStream.Read()[1..];
+```
+
 ## Related Projects
 
 - [CLI for MasterKit CO2 Monitor](https://github.com/dmage/co2mon)
@@ -23,10 +51,6 @@
 - `ru` [Forewarned is forearmed. Part 3](https://habr.com/ru/companies/masterkit/articles/248403/). by MasterKit (device rebrander)
 - [AN146-RAD-0401-serial-communication](http://co2meters.com/Documentation/AppNotes/AN146-RAD-0401-serial-communication.pdf). RS-232 serial protocol description
 - [Reading a zyTemp Carbon Dioxide Monitor using Tkinter on Linux](https://blog.tfiu.de/reading-a-zytemp-carbon-dioxide-monitor-using-tkinter-on-linux.html)
-
-## Using HidSharp with C#
-
-🚧 WIP 
 
 ## Protocol Analysis
 
