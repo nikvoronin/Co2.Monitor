@@ -1,6 +1,8 @@
 # Co2.Monitor
 
-`ZyAura ZG-01` sensor based module family.
+`ZyAura ZG-01` sensor based family modules.
+
+![Generic Device Look](https://user-images.githubusercontent.com/22738239/73683926-7a247c80-46c3-11ea-99cb-a086262aa693.jpg)
 
 - Product: USB-zyTemp
 - Manufacturer: Holtek
