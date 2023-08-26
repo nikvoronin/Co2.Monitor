@@ -5,7 +5,7 @@
 ![Generic Device Look](https://user-images.githubusercontent.com/22738239/73683926-7a247c80-46c3-11ea-99cb-a086262aa693.jpg)
 
 - Product: USB-zyTemp
-- Manufacturer: Holtek
+- Manufacturer: Holtek Semiconductor, Inc.
 - SerialNumber: 2.00
 - VID: 0x04D9
 - PID: 0xA052
@@ -42,6 +42,7 @@ var raw = hidStream.Read()[1..];
 
 - [CLI for MasterKit CO2 Monitor](https://github.com/dmage/co2mon)
 - [CO2 meter](https://github.com/vfilimonov/co2meter). A Python library for USB CO2 meter
+- [co2meter Exporter](https://github.com/rnurgaliyev/co2meter_exporter). Go-lang exporter to Prometheus.
 
 ## Additional Reading List
 
