@@ -1,6 +1,6 @@
 # Co2.Monitor
 
-`ZyAura ZG-01` sensor based family modules.
+`ZyAura ZG-01` sensor based modules.
 
 ![Generic Device Look](https://user-images.githubusercontent.com/22738239/73683926-7a247c80-46c3-11ea-99cb-a086262aa693.jpg)
 
@@ -56,7 +56,7 @@ var raw = hidStream.Read()[1..];
 
 ### Unique Packet Ids
 
-- Polling: 6D, 6E, 71, 50, 57, 56, 41, 43, 42, 4F, 52
+- Communication: 6D, 6E, 71, 50, 57, 56, 41, 43, 42, 4F, 52
 - Startup: 63, 64, 28, 29, 26, 25, 71, 45, 79, 75, 2E, 41, 47, 49, 72, 69, 4B, 51, 6F, 6C, 76, 77, 7A, 78, 53, 3D, 60, 54, 7B, 55, 4E, 3A, 58, 70, 73, 68, 2F, 4C, 3B, 5D, 5E, 66, 4D, 5B, 59, 65, 6E, 5C, 74
 
 ### Startup Data Snapshot
